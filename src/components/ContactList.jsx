@@ -8,21 +8,23 @@ const initState = [
       id : 1,
       first_name : "Priya",
       last_name :  "heda",
-      phone : "+91 147174152" 
+      phone : "+91 147174152",
+      email : "priya@gmail.com"
 
     },
     {
       id : 2,
       first_name : "Raju",
       last_name :  "Sharma",
-      phone : "+91 7447174152"
-
+      phone : "+91 7447174152",
+      email : "raja@gmail.com"
     },
     {
       id : 3,
       first_name : "Nad",
       last_name :  "joat",
-      phone : "+91 8930474152"
+      phone : "+91 8930474152",
+      email : "nad@gmail.com"
 
     }
   ];
@@ -37,7 +39,7 @@ export default function ContactList() {
   // )
   // console.log(List)
 
-  const handleClick = (name, phone) =>{
+  const handleClick = (name,  email ) =>{
     setContactList([
       ...contactList,
       {
@@ -45,7 +47,7 @@ export default function ContactList() {
         id : contactList[contactList.length -1].id + 1,
         first_name : name,
         last_name : "",
-        phone : phone
+        email  : email 
       }
     ]);
   };
@@ -62,16 +64,19 @@ export default function ContactList() {
       <h1>Add to Contact</h1>
       <AddContact handleClick={handleClick} > </AddContact> 
       <br></br>
-      <h2>Contact List</h2>
-      {contactList.map( (item) => (
+      <h2>Contact list</h2>
+       <div id='insidebox'>
+       {contactList.map( (item) => (
         <div key={item.id}>
            <ContactCard 
              id={item.id}
              name={item.first_name} 
-             phone={item.phone}  
+             email={item.email }  
              onDelete={deleteById}/>
         </div>
       ) )}
+         
+    </div> 
    
     </div>
   )

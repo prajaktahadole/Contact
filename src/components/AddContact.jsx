@@ -1,15 +1,16 @@
 import React from 'react';
 import { useState } from 'react';
 import './ContactCard.css';
+//import trashIcon from "./trash-icon.png";
 
  const AddContact = (props) =>{
   const [text, setText] = useState("");
-  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
 
   const handleClick = () =>{
-    if (props.handleClick) props.handleClick(text, phone);
+    if (props.handleClick) props.handleClick(text, email );
      setText("");
-     setPhone("");
+     setEmail("");
   };
 
   return (
@@ -24,9 +25,9 @@ import './ContactCard.css';
      </div>
       
      <div>
-     <input value={phone} 
-      onChange={(e) => setPhone(e.target.value)}
-       placeholder="Phone Number">
+     <input value={email} 
+      onChange={(e) => setEmail(e.target.value)}
+       placeholder="Email Id">
       </input>
      </div>
 
