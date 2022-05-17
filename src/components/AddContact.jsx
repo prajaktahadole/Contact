@@ -4,14 +4,15 @@ import './ContactCard.css';
 
  const AddContact = (props) =>{
   const [text, setText] = useState("");
-  const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
 
   const handleClick = () =>{
-    if (props.handleClick) props.handleClick(text, phone, email );
+    if (props.handleClick) props.handleClick(text, email, phone );
      setText("");
-     setPhone("");
      setEmail("");
+     setPhone("");
+ 
   };
 
   return (
@@ -26,14 +27,7 @@ import './ContactCard.css';
       </input>
      </div>
 
-     <div>
-     <input 
-      className='inputbox'
-      value={phone} 
-      onChange={(e) => setPhone(e.target.value)}
-      placeholder="Phone Number">
-      </input>
-     </div>
+    
       
      <div>
      <input 
@@ -44,6 +38,15 @@ import './ContactCard.css';
       </input>
      </div>
 
+
+     <div>
+     <input 
+      className='inputbox'
+      value={phone} 
+      onChange={(e) => setPhone(e.target.value)}
+      placeholder="Phone Number">
+      </input>
+     </div>
 
 
      <div>

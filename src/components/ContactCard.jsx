@@ -10,7 +10,7 @@ const ContactCard = ({id, name, email, phone, onDelete}) =>{
   if(isActive){
     return (
       <div onClick={() => setIsActive(false)}>
-        {isActive && <div className="ActiveDiv">
+        {isActive && <div className="Active">
           <div>Name : {name}</div>
           <div>Contact Number :{phone}</div>
           <div>Email id : {email}</div>
