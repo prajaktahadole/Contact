@@ -1,5 +1,7 @@
 import React from "react";
 import './ContactCard.css';
+import trashIcon from "../../trash-icon.png";
+
 
 const ContactCard = ({id, name, email  , onDelete}) =>{
   return (
@@ -8,7 +10,9 @@ const ContactCard = ({id, name, email  , onDelete}) =>{
   
   <div> {name} </div>
   <div> { email } </div>
-  <button onClick={() => onDelete(id)}> Delete</button>
+  <button onClick={() => onDelete(id)}>
+    <img src={trashIcon} className="delete-icon" alt="delete-task"></img>
+  </button>
     </div>
   );
   

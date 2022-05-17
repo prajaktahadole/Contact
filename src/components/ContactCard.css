@@ -19,10 +19,19 @@
     
 }
 
+.inputbox {
+    height: 25px;
+}
+
 #insidebox{
     border: 1px solid white;
     width: 35%;
     margin: auto;
-    background-color: aliceblue;
+    background-color: whitesmoke;
     color: black;
 }
+
+.delete-icon {
+    height: 18px;
+    cursor: pointer;
+  }

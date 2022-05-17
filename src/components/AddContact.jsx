@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
 import './ContactCard.css';
-//import trashIcon from "./trash-icon.png";
 
  const AddContact = (props) =>{
   const [text, setText] = useState("");
@@ -18,6 +17,7 @@ import './ContactCard.css';
       <div id='main-addContact'>
      <div>
      <input 
+     className='inputbox'
       value={text} 
       onChange={(e) => setText(e.target.value)}  
       placeholder="Name">
@@ -25,9 +25,11 @@ import './ContactCard.css';
      </div>
       
      <div>
-     <input value={email} 
+     <input 
+      className='inputbox'
+      value={email} 
       onChange={(e) => setEmail(e.target.value)}
-       placeholder="Email Id">
+      placeholder="Email Id">
       </input>
      </div>
 
