@@ -47,6 +47,7 @@ export default function ContactList() {
         id : contactList[contactList.length -1].id + 1,
         first_name : name,
         last_name : "",
+        phone : phone,
         email  : email 
       }
     ]);
@@ -71,6 +72,7 @@ export default function ContactList() {
            <ContactCard 
              id={item.id}
              name={item.first_name} 
+             phone={item.phone}
              email={item.email }  
              onDelete={deleteById}/>
         </div>

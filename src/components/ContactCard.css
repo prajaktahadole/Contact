@@ -12,7 +12,7 @@
 
 #main-addContact{
     display: flex;
-    width : 30%;
+    width : 40%;
     margin: auto;
     gap : 2rem;
     text-align: center;
@@ -34,4 +34,21 @@
 .delete-icon {
     height: 18px;
     cursor: pointer;
-  }
+}
+
+.mobileBox{
+    display: flex;
+    cursor: pointer;
+    gap : 2rem;
+}
+
+.ActiveDiv {
+    background-color: aquamarine;
+}
+
+
+.ActiveDiv > div{
+    font-weight: bold;
+    margin-bottom: 10px;
+    
+}
