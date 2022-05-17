@@ -73,7 +73,8 @@ export default function ContactList() {
            <ContactCard 
              id={item.id}
              name={item.first_name} 
-             email={item.email }  
+             email={item.email } 
+             phone={item.phone} 
              onDelete={deleteById}/>
         </div>
       ) )}
